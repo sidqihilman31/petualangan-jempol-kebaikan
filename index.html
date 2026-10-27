@@ -58,6 +58,12 @@
     .pulse-glow {
       animation: pulseGlow 2s infinite alternate;
     }
+    /* Tambahan Styling untuk Kata-Kata Game Diperbesar & Diseragamkan */
+    .game-word-item {
+      color: #0d9488 !important;
+      font-size: 28px !important;
+      font-weight: 800 !important;
+    }
     @keyframes pulseGlow {
       0% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.4); }
       100% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.8); }
@@ -81,7 +87,7 @@
         </div>
         <div>
           <h1 class="font-extrabold text-sm sm:text-lg text-teal-900 leading-tight">Jempol Kebaikan</h1>
-          <p class="text-xs font-semibold text-teal-600 hidden sm:block">Hamba Allah Ar-Rahman</p>
+          <p class="text-xs font-semibold text-teal-600 hidden sm:block">Madrasah Rabbaniyah</p>
         </div>
       </div>
 
@@ -91,7 +97,7 @@
         <div class="flex items-center gap-2 bg-emerald-50 border-2 border-emerald-300 px-3 py-1.5 rounded-2xl shadow-sm">
           <span class="text-lg">🌟</span>
           <div class="text-left">
-            <p class="text-[32px] font-bold text-emerald-700 uppercase tracking-wider leading-none">Catatan Baik (Pahala)</p>
+            <p class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider leading-none">Catatan Baik</p>
             <span id="pahala-count" class="text-sm sm:text-base font-black text-emerald-600">0</span>
           </div>
         </div>
@@ -100,7 +106,7 @@
         <div class="flex items-center gap-2 bg-rose-50 border-2 border-rose-300 px-3 py-1.5 rounded-2xl shadow-sm">
           <span class="text-lg">⚠️</span>
           <div class="text-left">
-            <p class="text-[32px] font-bold text-emerald-700 uppercase tracking-wider leading-none">'Catatan Buruk (Dosa)</p>
+            <p class="text-[10px] font-bold text-rose-700 uppercase tracking-wider leading-none">Catatan Buruk</p>
             <span id="dosa-count" class="text-sm sm:text-base font-black text-rose-600">0</span>
           </div>
         </div>
@@ -134,7 +140,7 @@
           Petualangan Jempol Kebaikan
         </h2>
         <p class="text-sm sm:text-base font-medium text-slate-600 leading-relaxed">
-          Tahukah kamu? Ketikan jempolmu di layar gadget dicatat oleh <strong class="text-emerald-700">Catatan Baik</strong> dan <strong class="text-emerald-700">Catatan Buruk</strong>. Yuk, jadi anak sholih penebar kebaikan Ar-Rahman!
+          Tahukah kamu? Ketikan jempolmu di layar gadget dicatat oleh <strong class="text-emerald-700">Catatan Baik</strong> dan <strong class="text-rose-600">Catatan Buruk</strong>. Yuk, jadi anak sholih penebar kebaikan Ar-Rahman di Madrasah Rabbaniyah!
         </p>
       </div>
 
@@ -203,7 +209,7 @@
             </div>
             <div>
               <p id="chat-contact-name" class="font-bold leading-none text-sm">Grup WA Keluarga</p>
-              <p id="chat-status" class="text-[10px] text-teal-200">Online • Jempol Santun</p>
+              <p id="chat-status" class="text-[10px] text-teal-200">Online • Madrasah Rabbaniyah</p>
             </div>
           </div>
           <div class="flex items-center gap-2 text-teal-200">
@@ -260,7 +266,7 @@
           <div class="text-5xl">⚡👍</div>
           <h3 class="text-2xl font-extrabold text-amber-300">Refleks Jempol Halal</h3>
           <p class="text-xs text-slate-300 max-w-sm leading-relaxed">
-            Tangkap gelembung <strong class="text-emerald-400">KATA BAIK </strong> untuk mendapat PAHALA 🌟. Abaikan / Hapus gelembung <strong class="text-rose-400">KATA BURUK </strong> agar tidak dapat DOSA ⚠️!
+            Tangkap gelembung <strong class="text-emerald-400 game-word-item">KATA BAIK (Hijau)</strong> untuk mendapat PAHALA 🌟. Abaikan / Hapus gelembung <strong class="text-rose-400 game-word-item">KATA BURUK (Merah)</strong> agar tidak dapat DOSA ⚠️!
           </p>
           <button onclick="runMinigameLoop()" class="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-black rounded-2xl shadow-lg transition transform hover:scale-105">
             Mulai Permainan!
@@ -311,7 +317,7 @@
               <span class="text-3xl">🎖️</span>
               <div>
                 <h3 class="font-extrabold text-amber-900 text-lg leading-tight">SERTIFIKAT PAHLAWAN JEMPOL KEBAIKAN</h3>
-                <p class="text-xs text-amber-700 font-semibold">Madrasah Rabbaniyyah • Generasi Hamba Ar-Rahman</p>
+                <p class="text-xs text-amber-700 font-semibold">Madrasah Rabbaniyah • Generasi Hamba Ar-Rahman</p>
               </div>
             </div>
             <div class="text-right">
@@ -356,7 +362,7 @@
           🌟
         </div>
         <div>
-          <h4 id="modal-title" class="font-black text-lg text-slate-800">Catatan Malaikat</h4>
+          <h4 id="modal-title" class="font-black text-lg text-slate-800">Catatan Kebajikan</h4>
           <p id="modal-subtitle" class="text-xs font-semibold text-slate-500">Pahala +100</p>
         </div>
       </div>
@@ -380,7 +386,7 @@
 
   <!-- FOOTER -->
   <footer class="bg-white/80 border-t border-slate-200 py-3 text-center text-xs font-bold text-teal-800">
-    Madrasah Rabbaniyyah • Menyayangi Teman Lewat Lisan &amp; Jempol 🌟
+    Madrasah Rabbaniyah • Menyayangi Teman Lewat Lisan &amp; Jempol 🌟
   </footer>
 
 
@@ -476,7 +482,7 @@
             dosaDelta: 100,
             emoji: "😢",
             friendText: "Ibu bersedih dan kecewa karena balasan kasarmu.",
-            explanation: "<strong>Dosa Durhaka Lewat Jempol!</strong> Membantah orang tua lewat chat bobot dosanya SAMA dengan melawan secara langsung. Malaikat mencatat setiap huruf kasarmu!"
+            explanation: "<strong>Dosa Durhaka Lewat Jempol!</strong> Membantah orang tua lewat chat bobot dosanya SAMA dengan melawan secara langsung. Catatan Buruk mencatat setiap huruf kasarmu!"
           }
         ]
       },
@@ -532,7 +538,7 @@
             dosaDelta: 100,
             emoji: "😨",
             friendText: "Tante kaget, tersinggung, dan sedih melihat balasan itu.",
-            explanation: "<strong>Dosa Menyakiti Kerabat!</strong> Tangan kita tidak boleh mengirim gambar/stiker jelek yang membuat orang lain sedih. Ini adalah dosa, malaikat mencatat ulah jempolmu!"
+            explanation: "<strong>Dosa Menyakiti Kerabat!</strong> Tangan kita tidak boleh mengirim gambar/stiker jelek yang membuat orang lain sedih. Ini adalah dosa, Catatan Buruk mencatat ulah jempolmu!"
           }
         ]
       },
@@ -743,14 +749,14 @@
         modalCard.className = "bg-white rounded-3xl max-w-md w-full p-6 space-y-4 border-4 border-emerald-400 shadow-2xl";
         modalIcon.className = "w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl shadow";
         modalIcon.innerHTML = "🌟";
-        modalTitle.textContent = "Catatan Kebajikan Raqib";
+        modalTitle.textContent = "Catatan Baik (Pahala)";
         modalSub.textContent = `Pahala +${choice.pahalaDelta} (Allah Ar-Rahman Ridho)`;
         modalSub.className = "text-xs font-bold text-emerald-600";
       } else {
         modalCard.className = "bg-white rounded-3xl max-w-md w-full p-6 space-y-4 border-4 border-rose-400 shadow-2xl";
         modalIcon.className = "w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl shadow";
         modalIcon.innerHTML = "⚠️";
-        modalTitle.textContent = "Catatan Peringatan 'Atid";
+        modalTitle.textContent = "Catatan Buruk (Dosa)";
         modalSub.textContent = `Dosa +${choice.dosaDelta} (Hati-hati Kezaliman Jempol)`;
         modalSub.className = "text-xs font-bold text-rose-600";
       }
@@ -830,7 +836,7 @@
       const bubble = document.createElement('div');
       const randomX = Math.floor(Math.random() * 70) + 10; // 10% to 80%
 
-      bubble.className = `absolute px-4 py-2 rounded-full font-extrabold text-xs shadow-lg cursor-pointer transform transition duration-200 select-none flex items-center gap-1 ${
+      bubble.className = `absolute px-4 py-2 rounded-full shadow-lg cursor-pointer transform transition duration-200 select-none flex items-center gap-1 game-word-item ${
         isGood 
           ? 'bg-emerald-500 text-white border-2 border-emerald-300 hover:scale-110' 
           : 'bg-rose-600 text-white border-2 border-rose-300 hover:scale-110'
@@ -935,3 +941,7 @@
   </script>
 </body>
 </html>
+
+```
+
+Silakan *commit* perubahan ini ke GitHub, dan website Anda akan otomatis memperbarui tampilannya via Netlify!
