@@ -1,947 +1,937 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Petualangan Jempol Kebaikan: Menjadi Hamba Ar-Rahman</title>
-  <!-- Google Fonts & FontAwesome -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800;900&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              teal: '#0d9488',
-              mint: '#14b8a6',
-              gold: '#f59e0b',
-              amber: '#d97706',
-              bgLight: '#f0fdf4',
-              danger: '#ef4444'
-            }
-          },
-          fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            display: ['Quicksand', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: radial-gradient(circle at top, #f0fdf4 0%, #dcfce7 100%);
-      min-height: 100vh;
-      user-select: none;
-    }
-    .phone-mockup {
-      box-shadow: 0 20px 40px -15px rgba(13, 148, 136, 0.25), 0 0 0 12px #1e293b;
-      border-radius: 40px;
-    }
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 6px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background-color: #cbd5e1;
-      border-radius: 10px;
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(8px);
-    }
-    .pulse-glow {
-      animation: pulseGlow 2s infinite alternate;
-    }
-    /* Tambahan Styling untuk Kata-Kata Game Diperbesar & Diseragamkan */
-    .game-word-item {
-      color: #0d9488 !important;
-      font-size: 28px !important;
-      font-weight: 800 !important;
-    }
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.4); }
-      100% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.8); }
-    }
-    @media print {
-      body * { visibility: hidden; }
-      #printable-certificate, #printable-certificate * { visibility: visible; }
-      #printable-certificate { position: absolute; left: 0; top: 0; width: 100%; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petualangan Jempol Kebaikan: Menjadi Hamba Ar-Rahman</title>
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800;900&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#0d9488',
+              mint: '#14b8a6',
+              gold: '#f59e0b',
+              amber: '#d97706',
+              bgLight: '#f0fdf4',
+              danger: '#ef4444'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['Quicksand', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at top, #f0fdf4 0%, #dcfce7 100%);
+      min-height: 100vh;
+      user-select: none;
+    }
+    .phone-mockup {
+      box-shadow: 0 20px 40px -15px rgba(13, 148, 136, 0.25), 0 0 0 12px #1e293b;
+      border-radius: 40px;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #cbd5e1;
+      border-radius: 10px;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+    }
+    .pulse-glow {
+      animation: pulseGlow 2s infinite alternate;
+    }
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.4); }
+      100% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.8); }
+    }
+    @media print {
+      body * { visibility: hidden; }
+      #printable-certificate, #printable-certificate * { visibility: visible; }
+      #printable-certificate { position: absolute; left: 0; top: 0; width: 100%; }
+    }
+  </style>
 </head>
 <body class="text-slate-800 flex flex-col min-h-screen overflow-x-hidden">
 
-  <!-- TOP HEADER / SCOREBAR -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b-4 border-teal-500 shadow-md px-4 py-3">
-    <div class="max-w-4xl mx-auto flex items-center justify-between">
-      <!-- Logo / Title -->
-      <div class="flex items-center gap-3 cursor-pointer" onclick="goHome()">
-        <div class="w-10 h-10 bg-teal-500 text-white rounded-2xl flex items-center justify-center font-black text-xl shadow-lg transform hover:scale-105 transition">
-          👍
-        </div>
-        <div>
-          <h1 class="font-extrabold text-sm sm:text-lg text-teal-900 leading-tight">Jempol Kebaikan</h1>
-          <p class="text-xs font-semibold text-teal-600 hidden sm:block">Madrasah Rabbaniyah</p>
-        </div>
-      </div>
-
-      <!-- Live Counters: Catatan Baik & Catatan Buruk -->
-      <div class="flex items-center gap-2 sm:gap-4">
-        <!-- Catatan Baik (Pahala) -->
-        <div class="flex items-center gap-2 bg-emerald-50 border-2 border-emerald-300 px-3 py-1.5 rounded-2xl shadow-sm">
-          <span class="text-lg">🌟</span>
-          <div class="text-left">
-            <p class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider leading-none">Catatan Baik</p>
-            <span id="pahala-count" class="text-sm sm:text-base font-black text-emerald-600">0</span>
-          </div>
-        </div>
-
-        <!-- Catatan Buruk (Dosa) -->
-        <div class="flex items-center gap-2 bg-rose-50 border-2 border-rose-300 px-3 py-1.5 rounded-2xl shadow-sm">
-          <span class="text-lg">⚠️</span>
-          <div class="text-left">
-            <p class="text-[10px] font-bold text-rose-700 uppercase tracking-wider leading-none">Catatan Buruk</p>
-            <span id="dosa-count" class="text-sm sm:text-base font-black text-rose-600">0</span>
-          </div>
-        </div>
-
-        <!-- Audio Toggle Button -->
-        <button id="btn-sound" onclick="toggleSound()" class="w-10 h-10 bg-slate-100 hover:bg-teal-100 text-slate-600 hover:text-teal-700 rounded-2xl flex items-center justify-center transition border-2 border-slate-200">
-          <i class="fa-solid fa-volume-high text-lg"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- MAIN CONTAINER -->
-  <main class="flex-grow max-w-4xl w-full mx-auto p-4 flex flex-col justify-center">
-
-    <!-- 1. SCREEN: HOME / MENU UTAMA -->
-    <section id="screen-home" class="space-y-6 text-center py-6">
-      <!-- Mascot Container -->
-      <div class="relative inline-block">
-        <div class="w-32 h-32 sm:w-40 sm:h-40 bg-gradient-to-tr from-teal-400 to-emerald-300 rounded-full mx-auto p-2 shadow-2xl flex items-center justify-center border-4 border-white pulse-glow">
-          <div class="text-7xl sm:text-8xl transform hover:rotate-12 transition duration-300">👍</div>
-        </div>
-        <span class="absolute -bottom-2 -right-2 bg-amber-400 text-teal-950 text-xs font-extrabold px-3 py-1 rounded-full border-2 border-white shadow">
-          Si Jempol Santun 🌟
-        </span>
-      </div>
-
-      <!-- Title & Intro -->
-      <div class="space-y-2 max-w-xl mx-auto">
-        <h2 class="text-2xl sm:text-4xl font-black text-teal-950 font-display">
-          Petualangan Jempol Kebaikan
-        </h2>
-        <p class="text-sm sm:text-base font-medium text-slate-600 leading-relaxed">
-          Tahukah kamu? Ketikan jempolmu di layar gadget dicatat oleh <strong class="text-emerald-700">Catatan Baik</strong> dan <strong class="text-rose-600">Catatan Buruk</strong>. Yuk, jadi anak sholih penebar kebaikan Ar-Rahman di Madrasah Rabbaniyah!
-        </p>
-      </div>
-
-      <!-- Mode Options -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto pt-4">
-        <!-- Mode 1 Card -->
-        <div onclick="startStoryMode()" class="group cursor-pointer bg-white border-4 border-emerald-400 hover:border-emerald-500 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 text-left flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition">
-              <i class="fa-solid fa-comments"></i>
-            </div>
-            <h3 class="text-xl font-extrabold text-slate-800">Petualangan Cerita Chat</h3>
-            <p class="text-xs text-slate-500 leading-relaxed">
-              Simulasi pesan WhatsApp &amp; Game Roblox/Minecraft. Pilih ketikan lisan yang bikin Allah sayang!
-            </p>
-          </div>
-          <button class="mt-6 w-full py-3 bg-emerald-500 group-hover:bg-emerald-600 text-white font-extrabold rounded-xl shadow-md transition flex items-center justify-center gap-2">
-            <span>Mulai Simulasi</span> <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </div>
-
-        <!-- Mode 2 Card -->
-        <div onclick="startMinigameMode()" class="group cursor-pointer bg-white border-4 border-amber-400 hover:border-amber-500 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 text-left flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition">
-              <i class="fa-solid fa-gamepad"></i>
-            </div>
-            <h3 class="text-xl font-extrabold text-slate-800">Refleks Jempol Halal</h3>
-            <p class="text-xs text-slate-500 leading-relaxed">
-              Latih kecermatan jarimu! Ketuk gelembung kata-kata BAIK &amp; abaikan/hapus kata-kata BURUK!
-            </p>
-          </div>
-          <button class="mt-6 w-full py-3 bg-amber-500 group-hover:bg-amber-600 text-white font-extrabold rounded-xl shadow-md transition flex items-center justify-center gap-2">
-            <span>Main Mini-Game</span> <i class="fa-solid fa-gamepad"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Golden Advice Banner -->
-      <div class="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4 max-w-2xl mx-auto text-xs text-amber-900 font-semibold flex items-center gap-3 text-left">
-        <span class="text-2xl">📜</span>
-        <p><strong>Ingat Pesan Rasulullah ﷺ:</strong> "Siapa yang beriman kepada Allah dan hari akhir, hendaklah ia berkata yang baik atau diam." (HR. Bukhari &amp; Muslim)</p>
-      </div>
-    </section>
-
-
-    <!-- 2. SCREEN: MODE 1 - SIMULASI CHAT SMARTPHONE -->
-    <section id="screen-chat" class="hidden py-2 space-y-4">
-      <!-- Progress Bar Scenario -->
-      <div class="flex items-center justify-between text-xs font-bold text-slate-600 px-2">
-        <span id="scenario-step-indicator">Skenario 1 dari 5</span>
-        <span class="text-teal-700 font-extrabold" id="scenario-topic">Pinjam HP Orang Tua</span>
-      </div>
-
-      <div class="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
-        <div id="scenario-progress" class="bg-teal-500 h-2 rounded-full transition-all duration-300 w-1/5"></div>
-      </div>
-
-      <!-- Phone UI Frame -->
-      <div class="phone-mockup bg-slate-900 max-w-sm sm:max-w-md mx-auto overflow-hidden text-slate-800 flex flex-col h-[520px] relative">
-        <!-- Phone Top Bar -->
-        <div class="bg-teal-800 text-white px-4 py-3 flex items-center justify-between text-xs">
-          <div class="flex items-center gap-2">
-            <div id="chat-avatar" class="w-8 h-8 bg-amber-300 rounded-full flex items-center justify-center text-base font-bold text-slate-800 shadow">
-              👩
-            </div>
-            <div>
-              <p id="chat-contact-name" class="font-bold leading-none text-sm">Grup WA Keluarga</p>
-              <p id="chat-status" class="text-[10px] text-teal-200">Online • Madrasah Rabbaniyah</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-2 text-teal-200">
-            <i class="fa-solid fa-signal"></i>
-            <i class="fa-solid fa-wifi"></i>
-            <i class="fa-solid fa-battery-full"></i>
-          </div>
-        </div>
-
-        <!-- Chat Scroll Area -->
-        <div id="chat-body" class="flex-grow bg-slate-100 p-4 overflow-y-auto space-y-3 custom-scrollbar text-xs">
-          <!-- Chat Bubbles generated dynamically -->
-        </div>
-
-        <!-- Choice Options Panel -->
-        <div id="chat-options-panel" class="bg-white border-t border-slate-200 p-3 space-y-2">
-          <p class="text-[11px] font-bold text-slate-500 uppercase tracking-wider text-center">Apa yang akan jempolmu ketik?</p>
-          <div id="chat-choices-container" class="space-y-2">
-            <!-- Buttons injected by JS -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 3. SCREEN: MODE 2 - MINI GAME "REFLEKS JEMPOL HALAL" -->
-    <section id="screen-minigame" class="hidden py-2 space-y-4 text-center">
-      <!-- Game Info Panel -->
-      <div class="flex items-center justify-between bg-white px-4 py-3 rounded-2xl shadow-md border-2 border-amber-300">
-        <div class="text-left">
-          <p class="text-[10px] font-bold text-slate-400 uppercase">Waktu Tersisa</p>
-          <p id="mg-timer" class="text-xl font-black text-amber-600">30s</p>
-        </div>
-        <div>
-          <p class="text-[10px] font-bold text-slate-400 uppercase">Skor Mini-Game</p>
-          <p id="mg-score" class="text-xl font-black text-emerald-600">0 Poin</p>
-        </div>
-        <button onclick="goHome()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl text-xs font-bold transition">
-          Batal
-        </button>
-      </div>
-
-      <!-- Play Arena Canvas/Interactive Zone -->
-      <div id="minigame-arena" class="relative w-full h-[400px] bg-gradient-to-b from-teal-900 to-slate-900 rounded-3xl overflow-hidden border-4 border-amber-400 shadow-inner flex flex-col justify-between p-4">
-        <div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        
-        <!-- Floating bubbles layer -->
-        <div id="bubbles-container" class="absolute inset-0 overflow-hidden pointer-events-auto">
-          <!-- Floating items rendered via JS -->
-        </div>
-
-        <!-- Mini-Game Instructions overlay initially -->
-        <div id="mg-start-overlay" class="absolute inset-0 bg-slate-900/90 z-20 flex flex-col items-center justify-center p-6 text-white space-y-4">
-          <div class="text-5xl">⚡👍</div>
-          <h3 class="text-2xl font-extrabold text-amber-300">Refleks Jempol Halal</h3>
-          <p class="text-xs text-slate-300 max-w-sm leading-relaxed">
-            Tangkap gelembung <strong class="text-emerald-400 game-word-item">KATA BAIK (Hijau)</strong> untuk mendapat PAHALA 🌟. Abaikan / Hapus gelembung <strong class="text-rose-400 game-word-item">KATA BURUK (Merah)</strong> agar tidak dapat DOSA ⚠️!
-          </p>
-          <button onclick="runMinigameLoop()" class="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-black rounded-2xl shadow-lg transition transform hover:scale-105">
-            Mulai Permainan!
-          </button>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 4. SCREEN: HASIL & MIZAN AMAL -->
-    <section id="screen-result" class="hidden py-4 space-y-6 text-center">
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border-4 border-teal-400 space-y-6">
-        
-        <h2 class="text-2xl sm:text-3xl font-black text-teal-950 font-display">
-          ⚖️ Mizan Amal Jempolmu
-        </h2>
-
-        <!-- Timbangan / Mizan Visual -->
-        <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border-2 border-teal-200 relative overflow-hidden">
-          <div class="grid grid-cols-2 gap-4 items-center">
-            <!-- Catatan Baik Box -->
-            <div class="bg-white border-2 border-emerald-400 rounded-2xl p-4 shadow-sm text-center">
-              <span class="text-3xl">🌟</span>
-              <p class="text-xs font-bold text-emerald-700 uppercase mt-1">Catatan Baik</p>
-              <p id="res-pahala" class="text-3xl font-black text-emerald-600">0</p>
-              <p class="text-[10px] text-slate-500 font-semibold mt-1">Pahala &amp; Cinta Allah</p>
-            </div>
-
-            <!-- Catatan Buruk Box -->
-            <div class="bg-white border-2 border-rose-400 rounded-2xl p-4 shadow-sm text-center">
-              <span class="text-3xl">⚠️</span>
-              <p class="text-xs font-bold text-rose-700 uppercase mt-1">Catatan Buruk</p>
-              <p id="res-dosa" class="text-3xl font-black text-rose-600">0</p>
-              <p class="text-[10px] text-slate-500 font-semibold mt-1">Dosa Kezaliman Jempol</p>
-            </div>
-          </div>
-
-          <!-- Evaluation Message -->
-          <div id="mizan-status-box" class="mt-6 p-4 rounded-xl font-bold text-sm text-left flex items-start gap-3">
-            <!-- Dynamic text by JS -->
-          </div>
-        </div>
-
-        <!-- Printable Certificate Area -->
-        <div id="printable-certificate" class="bg-amber-50 border-4 border-amber-300 rounded-3xl p-6 text-left space-y-4 shadow-inner relative overflow-hidden">
-          <div class="flex items-center justify-between border-b-2 border-amber-200 pb-3">
-            <div class="flex items-center gap-2">
-              <span class="text-3xl">🎖️</span>
-              <div>
-                <h3 class="font-extrabold text-amber-900 text-lg leading-tight">SERTIFIKAT PAHLAWAN JEMPOL KEBAIKAN</h3>
-                <p class="text-xs text-amber-700 font-semibold">Madrasah Rabbaniyah • Generasi Hamba Ar-Rahman</p>
-              </div>
-            </div>
-            <div class="text-right">
-              <span class="text-xs font-bold text-amber-800 bg-amber-200 px-3 py-1 rounded-full">RESMI</span>
-            </div>
-          </div>
-
-          <div class="space-y-2">
-            <label class="block text-xs font-bold text-amber-900">Nama Anak Sholih / Sholihah:</label>
-            <input type="text" id="player-name-input" placeholder="Ketik Namamu Di Sini..." value="Anak Sholih" class="w-full px-4 py-2 bg-white border-2 border-amber-300 rounded-xl font-bold text-slate-800 focus:outline-none focus:border-amber-500">
-          </div>
-
-          <p class="text-xs text-amber-950 leading-relaxed italic">
-            "Diberikan sebagai bukti komitmen bahwa ketikan jempol di layar gadget digunakan hanya untuk menyebarkan kasih sayang, doa, dan kata-kata santun, serta menjaga diri dari kezaliman lisan."
-          </p>
-
-          <div class="flex items-center justify-between text-[11px] font-bold text-amber-800 pt-2 border-t border-amber-200">
-            <span>Disaksikan oleh: Catatan Baik &amp; Catatan Buruk</span>
-            <span>Motto: Menjadi Hamba Ar-Rahman 🌟</span>
-          </div>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="flex flex-col sm:flex-row gap-3 pt-2">
-          <button onclick="printCertificate()" class="flex-1 py-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-black rounded-xl shadow-md transition flex items-center justify-center gap-2">
-            <i class="fa-solid fa-print"></i> Cetak / Simpan Sertifikat
-          </button>
-          <button onclick="goHome()" class="flex-1 py-3 bg-teal-600 hover:bg-teal-700 text-white font-black rounded-xl shadow-md transition flex items-center justify-center gap-2">
-            <i class="fa-solid fa-rotate-right"></i> Main Lagi
-          </button>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ISLAMIC POPUP MODAL -->
-  <div id="modal-feedback" class="fixed inset-0 bg-slate-950/80 z-50 backdrop-blur-sm flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 space-y-4 border-4 shadow-2xl transform transition-all scale-95" id="modal-card">
-      <div class="flex items-center gap-3">
-        <div id="modal-icon" class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl shadow">
-          🌟
-        </div>
-        <div>
-          <h4 id="modal-title" class="font-black text-lg text-slate-800">Catatan Kebajikan</h4>
-          <p id="modal-subtitle" class="text-xs font-semibold text-slate-500">Pahala +100</p>
-        </div>
-      </div>
-
-      <!-- Emotional Friend Reaction Box -->
-      <div id="modal-reaction-box" class="bg-slate-50 border-2 rounded-2xl p-3 flex items-center gap-3">
-        <span id="modal-friend-emoji" class="text-3xl">😊</span>
-        <p id="modal-friend-text" class="text-xs font-bold text-slate-700">Temanmu tersenyum bahagia karena ketikanmu!</p>
-      </div>
-
-      <!-- Islamic Explanation -->
-      <p id="modal-explanation" class="text-xs text-slate-600 leading-relaxed font-medium">
-        Penjelasan islami...
-      </p>
-
-      <button onclick="closeModalAndNext()" class="w-full py-3 bg-teal-600 hover:bg-teal-700 text-white font-black rounded-xl shadow-md transition">
-        Lanjutkan Petualangan 🚀
-      </button>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="bg-white/80 border-t border-slate-200 py-3 text-center text-xs font-bold text-teal-800">
-    Madrasah Rabbaniyah • Menyayangi Teman Lewat Lisan &amp; Jempol 🌟
-  </footer>
-
-
-  <!-- JAVASCRIPT GAME LOGIC -->
-  <script>
-    /* ===================================================
-       1. AUDIO SYNTHESIZER (WEB AUDIO API - NO EXTERNAL FILES)
-       =================================================== */
-    let audioCtx = null;
-    let isSoundOn = true;
-
-    function initAudio() {
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      }
-    }
-
-    function playTone(freq, type, duration, vol=0.1) {
-      if (!isSoundOn) return;
-      try {
-        initAudio();
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = type;
-        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-        gain.gain.setValueAtTime(vol, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start();
-        osc.stop(audioCtx.currentTime + duration);
-      } catch(e){}
-    }
-
-    function soundGood() {
-      playTone(523.25, 'sine', 0.15, 0.2); // C5
-      setTimeout(() => playTone(659.25, 'sine', 0.15, 0.2), 100); // E5
-      setTimeout(() => playTone(783.99, 'sine', 0.25, 0.2), 200); // G5
-    }
-
-    function soundBad() {
-      playTone(300, 'sawtooth', 0.2, 0.2);
-      setTimeout(() => playTone(200, 'sawtooth', 0.3, 0.2), 150);
-    }
-
-    function soundClick() {
-      playTone(800, 'sine', 0.05, 0.1);
-    }
-
-    function toggleSound() {
-      isSoundOn = !isSoundOn;
-      const btn = document.getElementById('btn-sound');
-      if (isSoundOn) {
-        btn.innerHTML = '<i class="fa-solid fa-volume-high text-lg"></i>';
-        btn.classList.remove('text-rose-600');
-        soundGood();
-      } else {
-        btn.innerHTML = '<i class="fa-solid fa-volume-xmark text-lg"></i>';
-        btn.classList.add('text-rose-600');
-      }
-    }
-
-
-    /* ===================================================
-       2. GAME STATE & SCENARIO DATA
-       =================================================== */
-    let pahala = 0;
-    let dosa = 0;
-    let currentScenarioIndex = 0;
-
-    const scenarios = [
-      {
-        topic: "Pesan dari Ibu",
-        contactName: "Ibu Tersayang",
-        avatar: "🤱",
-        messages: [
-          { sender: "them", text: "Nak, tolong angkat pakaian di jemuran ya. Mendung sepertinya, Ibu masih di pasar." }
-        ],
-        choices: [
-          {
-            text: "Ketik: 'Siap Ibu sayang! Jemuran sudah Budi angkat. Hati-hati di jalan ya Bu. 🥰'",
-            isGood: true,
-            pahalaDelta: 100,
-            dosaDelta: 0,
-            emoji: "💖",
-            friendText: "Ibu sangat terharu dan bangga membaca balasan santunmu!",
-            explanation: "<strong>Pahala Berbakti (Birrul Walidain)!</strong> Mengetik balasan yang sopan dan patuh kepada orang tua mendatangkan ridha Allah Ar-Rahman. Ketikan jempolmu bernilai pahala besar!"
-          },
-          {
-            text: "Ketik: 'Ah Ibu repotin aja! Budi lagi asyik main game nih, suruh kakak aja!'",
-            isGood: false,
-            pahalaDelta: 0,
-            dosaDelta: 100,
-            emoji: "😢",
-            friendText: "Ibu bersedih dan kecewa karena balasan kasarmu.",
-            explanation: "<strong>Dosa Durhaka Lewat Jempol!</strong> Membantah orang tua lewat chat bobot dosanya SAMA dengan melawan secara langsung. Catatan Buruk mencatat setiap huruf kasarmu!"
-          }
-        ]
-      },
-      {
-        topic: "Chat dengan Kakak",
-        contactName: "Kakak Rio",
-        avatar: "👦",
-        messages: [
-          { sender: "them", text: "Dek, lihat charger HP kakak di meja belajarmu nggak? Kalau ada tolong bawakan ke kamar ya." }
-        ],
-        choices: [
-          {
-            text: "Ketik: 'Ada nih Kak, sebentar aku antarkan ke kamarmu ya. 👍'",
-            isGood: true,
-            pahalaDelta: 100,
-            dosaDelta: 0,
-            emoji: "🤝",
-            friendText: "Kakak tersenyum senang dan berterima kasih atas bantuanmu!",
-            explanation: "<strong>Pahala Rukun Sesama Saudara!</strong> Membantu kakak atau adik dan membalas pesan mereka dengan baik adalah wujud kasih sayang yang disukai Allah."
-          },
-          {
-            text: "Ketik: 'Cari aja sendiri! Makanya jangan pelupa wleee 😝 dasar jelek!'",
-            isGood: false,
-            pahalaDelta: 0,
-            dosaDelta: 80,
-            emoji: "😠",
-            friendText: "Kakak kesal dan hal ini memicu pertengkaran di rumah.",
-            explanation: "<strong>Dosa Memancing Pertengkaran!</strong> Mengetik ejekan kepada saudara memutus tali silaturahmi. Gerakan jempol ini bernilai dosa kezaliman."
-          }
-        ]
-      },
-      {
-        topic: "Pesan untuk Tante (Pakai HP Ibu)",
-        contactName: "Tante Nur",
-        avatar: "👩‍🦰",
-        messages: [
-          { sender: "them", text: "Assalamu'alaikum, ini Tante. Ibu ada di rumah nggak ya?" }
-        ],
-        choices: [
-          {
-            text: "Kirim stiker bunga & ketik: 'Wa'alaikumsalam Tante, ini Budi. Ibu sedang mandi, nanti Budi sampaikan ya. Tante sehat selalu! 🌸'",
-            isGood: true,
-            pahalaDelta: 100,
-            dosaDelta: 0,
-            emoji: "🥰",
-            friendText: "Tante Nur tersenyum gembira membaca pesan sopan darimu!",
-            explanation: "<strong>Pahala Menghormati Kerabat!</strong> Menggunakan HP orang tua untuk membalas keluarga dengan stiker lucu dan sopan mencerminkan akhlak anak shalih idaman Allah Ar-Rahman."
-          },
-          {
-            text: "Kirim stiker hantu jelek/seram dan ketik: 'GAK ADA! Jangan ganggu!'",
-            isGood: false,
-            pahalaDelta: 0,
-            dosaDelta: 100,
-            emoji: "😨",
-            friendText: "Tante kaget, tersinggung, dan sedih melihat balasan itu.",
-            explanation: "<strong>Dosa Menyakiti Kerabat!</strong> Tangan kita tidak boleh mengirim gambar/stiker jelek yang membuat orang lain sedih. Ini adalah dosa, Catatan Buruk mencatat ulah jempolmu!"
-          }
-        ]
-      },
-      {
-        topic: "Main Game Online (Roblox / Minecraft)",
-        contactName: "Grup Chat Mabar",
-        avatar: "🎮",
-        messages: [
-          { sender: "system", text: "Match Selesai: Tim Kamu Kalah Tipis!" },
-          { sender: "them", text: "Aduh, maaf ya teman-teman tadi aku sempat salah jalan pas lagi diserang..." }
-        ],
-        choices: [
-          {
-            text: "Ketik: 'GG (Good Game) kawan! Tidak apa-apa, besok kita main lagi ya! 🌟'",
-            isGood: true,
-            pahalaDelta: 100,
-            dosaDelta: 0,
-            emoji: "😄",
-            friendText: "Temanmu merasa lega dan makin semangat bermain denganmu!",
-            explanation: "<strong>Pahala Memotivasi Teman!</strong> Mengendalikan jempol agar tetap mengetik yang baik saat main game online membuktikan kamu hamba Allah Ar-Rahman yang sejati."
-          },
-          {
-            text: "Ketik: 'Noob banget sih lu! Parah, dasar anak [Ejek Nama Orang Tua Teman]!'",
-            isGood: false,
-            pahalaDelta: 0,
-            dosaDelta: 100,
-            emoji: "😭",
-            friendText: "Temanmu sangat sedih karena diejek dan nama orang tuanya diolok-olok.",
-            explanation: "<strong>Dosa Besar Kezaliman Jempol!</strong> Mengejek skill dan nama orang tua teman di game online akan ditanya oleh Allah di akhirat. Jempolmu berbuat zalim!"
-          }
-        ]
-      },
-      {
-        topic: "Menyebar Aib Teman",
-        contactName: "Grup WA Kelas 5",
-        avatar: "📸",
-        messages: [
-          { sender: "them", text: "Eh liat nih muka si Budi pas ketiduran di kelas wkwk, lucu banget dijadiin stiker WhatsApp! 😂" }
-        ],
-        choices: [
-          {
-            text: "Ketik: 'Eh jangan disebarin kawan, itu kan aib. Kasihan Budi nanti malu, yuk kita hapus aja. 🛑'",
-            isGood: true,
-            pahalaDelta: 100,
-            dosaDelta: 0,
-            emoji: "🛡️",
-            friendText: "Budi terselamatkan dari rasa malu yang mendalam karena belaanmu.",
-            explanation: "<strong>Pahala Menutup Aib Teman!</strong> Siapa yang mencegah tersebarnya aib teman, Allah Ar-Rahman akan menutup aibnya di hari kiamat."
-          },
-          {
-            text: "Ketik: 'Wkwkwk kocak banget! Aku forward ke grup ekskul ah biar viral! 🤣'",
-            isGood: false,
-            pahalaDelta: 0,
-            dosaDelta: 100,
-            emoji: "💔",
-            friendText: "Budi menangis di kamar karena foto aibnya tersebar tanpa izin.",
-            explanation: "<strong>Pahala Ibadah Bisa Habis!</strong> Menyebarkan foto aib/stiker WA teman tanpa izin adalah DOSA BESAR kezaliman tangan. Jangan sampai pahala shalat dan puasamu habis di akhirat untuk ganti rugi pada Budi!"
-          }
-        ]
-      },
-      {
-        topic: "Mengucilkan Teman",
-        contactName: "Grup Geng Bermain",
-        avatar: "👥",
-        messages: [
-          { sender: "them", text: "Teman-teman, besok kita bikin grup WA internal baru aja yuk. Tapi nggak usah masukin si Budi, dia kan cupu." }
-        ],
-        choices: [
-          {
-            text: "Ketik: 'Jangan gitu dong, Budi kan teman kita juga. Biar seru kita kumpul bareng semua tanpa pilih-pilih. 🤗'",
-            isGood: true,
-            pahalaDelta: 100,
-            dosaDelta: 0,
-            emoji: "✨",
-            friendText: "Grup tetap rukun dan Budi merasa dihargai.",
-            explanation: "<strong>Pahala Menjaga Persaudaraan!</strong> Merangkul semua teman dan tidak ikut-ikutan mengucilkan adalah akhlak mulia yang sangat disayangi Allah."
-          },
-          {
-            text: "Ketik: 'Setuju banget! Bikin grup rahasia aja, usir dia dari pergaulan kita! 🤭'",
-            isGood: false,
-            pahalaDelta: 0,
-            dosaDelta: 100,
-            emoji: "😔",
-            friendText: "Budi merasa terasingkan, sedih, dan tidak punya teman.",
-            explanation: "<strong>Dosa Mengucilkan Orang!</strong> Mengucilkan teman dari grup adalah kezaliman lisan. Apakah kamu tidak mau disayang Allah Ar-Rahman? Jangan sampai Allah benci kita karena jempol kita menyakiti hati teman."
-          }
-        ]
-      }
-    ];
-
-
-    /* ===================================================
-       3. NAVIGATION & SCREEN CONTROLLERS
-       =================================================== */
-    function hideAllScreens() {
-      document.getElementById('screen-home').classList.add('hidden');
-      document.getElementById('screen-chat').classList.add('hidden');
-      document.getElementById('screen-minigame').classList.add('hidden');
-      document.getElementById('screen-result').classList.add('hidden');
-    }
-
-    function updateCounters() {
-      document.getElementById('pahala-count').textContent = pahala;
-      document.getElementById('dosa-count').textContent = dosa;
-    }
-
-    function goHome() {
-      soundClick();
-      hideAllScreens();
-      document.getElementById('screen-home').classList.remove('hidden');
-      stopMinigame();
-    }
-
-    function startStoryMode() {
-      soundClick();
-      hideAllScreens();
-      pahala = 0;
-      dosa = 0;
-      currentScenarioIndex = 0;
-      updateCounters();
-      document.getElementById('screen-chat').classList.remove('hidden');
-      loadScenario(currentScenarioIndex);
-    }
-
-
-    /* ===================================================
-       4. SIMULASI CHAT SCENARIO LOGIC
-       =================================================== */
-    function loadScenario(index) {
-      const sc = scenarios[index];
-      
-      // Update header indicators
-      document.getElementById('scenario-step-indicator').textContent = `Skenario ${index + 1} dari ${scenarios.length}`;
-      document.getElementById('scenario-topic').textContent = sc.topic;
-      document.getElementById('scenario-progress').style.width = `${((index + 1) / scenarios.length) * 100}%`;
-
-      document.getElementById('chat-contact-name').textContent = sc.contactName;
-      document.getElementById('chat-avatar').textContent = sc.avatar;
-
-      // Render Messages
-      const chatBody = document.getElementById('chat-body');
-      chatBody.innerHTML = '';
-
-      sc.messages.forEach(m => {
-        const bubble = document.createElement('div');
-        if (m.sender === 'system') {
-          bubble.className = "text-center text-[10px] bg-slate-200 text-slate-600 px-3 py-1 rounded-full font-bold my-1 mx-auto w-fit";
-          bubble.textContent = m.text;
-        } else {
-          bubble.className = "bg-white border border-slate-200 p-3 rounded-2xl rounded-tl-none shadow-sm text-slate-800 max-w-[85%] leading-relaxed font-medium";
-          bubble.textContent = m.text;
-        }
-        chatBody.appendChild(bubble);
-      });
-
-      // Render Choices Buttons
-      const choicesContainer = document.getElementById('chat-choices-container');
-      choicesContainer.innerHTML = '';
-
-      sc.choices.forEach(ch => {
-        const btn = document.createElement('button');
-        btn.className = "w-full p-3 bg-slate-50 hover:bg-teal-50 border-2 border-slate-200 hover:border-teal-400 text-slate-700 hover:text-teal-950 rounded-xl text-left font-bold transition flex items-center justify-between text-xs group shadow-sm";
-        btn.innerHTML = `
-          <span>${ch.text}</span>
-          <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-teal-600 transition"></i>
-        `;
-        btn.onclick = () => selectChoice(ch);
-        choicesContainer.appendChild(btn);
-      });
-    }
-
-    function selectChoice(choice) {
-      // Add user message bubble to chat
-      const chatBody = document.getElementById('chat-body');
-      const myBubble = document.createElement('div');
-      myBubble.className = "bg-teal-600 text-white p-3 rounded-2xl rounded-tr-none shadow-sm max-w-[85%] ml-auto text-xs leading-relaxed font-bold animate-bounce-short";
-      myBubble.textContent = choice.text;
-      chatBody.appendChild(myBubble);
-      chatBody.scrollTop = chatBody.scrollHeight;
-
-      // Apply points
-      if (choice.isGood) {
-        soundGood();
-        pahala += choice.pahalaDelta;
-      } else {
-        soundBad();
-        dosa += choice.dosaDelta;
-      }
-      updateCounters();
-
-      // Show Modal Feedback
-      setTimeout(() => {
-        showFeedbackModal(choice);
-      }, 400);
-    }
-
-    function showFeedbackModal(choice) {
-      const modal = document.getElementById('modal-feedback');
-      const modalCard = document.getElementById('modal-card');
-      const modalIcon = document.getElementById('modal-icon');
-      const modalTitle = document.getElementById('modal-title');
-      const modalSub = document.getElementById('modal-subtitle');
-      const modalEmoji = document.getElementById('modal-friend-emoji');
-      const modalFriendText = document.getElementById('modal-friend-text');
-      const modalExp = document.getElementById('modal-explanation');
-
-      if (choice.isGood) {
-        modalCard.className = "bg-white rounded-3xl max-w-md w-full p-6 space-y-4 border-4 border-emerald-400 shadow-2xl";
-        modalIcon.className = "w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl shadow";
-        modalIcon.innerHTML = "🌟";
-        modalTitle.textContent = "Catatan Baik (Pahala)";
-        modalSub.textContent = `Pahala +${choice.pahalaDelta} (Allah Ar-Rahman Ridho)`;
-        modalSub.className = "text-xs font-bold text-emerald-600";
-      } else {
-        modalCard.className = "bg-white rounded-3xl max-w-md w-full p-6 space-y-4 border-4 border-rose-400 shadow-2xl";
-        modalIcon.className = "w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl shadow";
-        modalIcon.innerHTML = "⚠️";
-        modalTitle.textContent = "Catatan Buruk (Dosa)";
-        modalSub.textContent = `Dosa +${choice.dosaDelta} (Hati-hati Kezaliman Jempol)`;
-        modalSub.className = "text-xs font-bold text-rose-600";
-      }
-
-      modalEmoji.textContent = choice.emoji;
-      modalFriendText.textContent = choice.friendText;
-      modalExp.innerHTML = choice.explanation;
-
-      modal.classList.remove('hidden');
-    }
-
-    function closeModalAndNext() {
-      soundClick();
-      document.getElementById('modal-feedback').classList.add('hidden');
-      currentScenarioIndex++;
-      if (currentScenarioIndex < scenarios.length) {
-        loadScenario(currentScenarioIndex);
-      } else {
-        showResultScreen();
-      }
-    }
-
-
-    /* ===================================================
-       5. MODE 2: MINI-GAME "REFLEKS JEMPOL HALAL" LOGIC
-       =================================================== */
-    let minigameInterval = null;
-    let minigameTimerInterval = null;
-    let minigameTimeLeft = 30;
-    let minigameScore = 0;
-
-    const goodWords = ["MasyaAllah", "Terima kasih", "Semangat!", "Maaf ya", "Kamu Hebat", "Alhamdulillah", "Jazakallah", "Saling Maaf", "Doa Baik"];
-    const badWords = ["Noob!", "Kirim foto aib", "Ejek ortu", "Keluarkan dia!", "Jelek banget!", "Benci kamu!", "Sebar rahasia"];
-
-    function startMinigameMode() {
-      soundClick();
-      hideAllScreens();
-      document.getElementById('screen-minigame').classList.remove('hidden');
-      document.getElementById('mg-start-overlay').classList.remove('hidden');
-      document.getElementById('bubbles-container').innerHTML = '';
-      minigameScore = 0;
-      minigameTimeLeft = 30;
-      document.getElementById('mg-score').textContent = "0 Poin";
-      document.getElementById('mg-timer').textContent = "30s";
-    }
-
-    function runMinigameLoop() {
-      soundClick();
-      document.getElementById('mg-start-overlay').classList.add('hidden');
-      
-      // Timer countdown
-      minigameTimerInterval = setInterval(() => {
-        minigameTimeLeft--;
-        document.getElementById('mg-timer').textContent = `${minigameTimeLeft}s`;
-        if (minigameTimeLeft <= 0) {
-          stopMinigame();
-          // Add minigame score to main pahala
-          pahala += minigameScore;
-          updateCounters();
-          showResultScreen();
-        }
-      }, 1000);
-
-      // Spawn bubbles
-      minigameInterval = setInterval(() => {
-        spawnBubble();
-      }, 800);
-    }
-
-    function spawnBubble() {
-      const container = document.getElementById('bubbles-container');
-      if (!container) return;
-
-      const isGood = Math.random() > 0.35; // 65% good, 35% bad
-      const word = isGood ? goodWords[Math.floor(Math.random() * goodWords.length)] : badWords[Math.floor(Math.random() * badWords.length)];
-
-      const bubble = document.createElement('div');
-      const randomX = Math.floor(Math.random() * 70) + 10; // 10% to 80%
-
-      bubble.className = `absolute px-4 py-2 rounded-full shadow-lg cursor-pointer transform transition duration-200 select-none flex items-center gap-1 game-word-item ${
-        isGood 
-          ? 'bg-emerald-500 text-white border-2 border-emerald-300 hover:scale-110' 
-          : 'bg-rose-600 text-white border-2 border-rose-300 hover:scale-110'
-      }`;
-      bubble.style.left = `${randomX}%`;
-      bubble.style.bottom = `-50px`;
-      bubble.innerHTML = `${isGood ? '🌟' : '⚠️'} ${word}`;
-
-      // Animation floating up
-      let bottomPos = -50;
-      const speed = Math.random() * 2 + 1.5;
-
-      const floatAnim = setInterval(() => {
-        bottomPos += speed;
-        bubble.style.bottom = `${bottomPos}px`;
-
-        if (bottomPos > 420) {
-          clearInterval(floatAnim);
-          if (bubble.parentElement) bubble.parentElement.removeChild(bubble);
-        }
-      }, 20);
-
-      // Tap / Click Event
-      bubble.onclick = () => {
-        clearInterval(floatAnim);
-        if (bubble.parentElement) bubble.parentElement.removeChild(bubble);
-
-        if (isGood) {
-          soundGood();
-          minigameScore += 20;
-          showFloatingText(randomX, bottomPos, "+20 Pahala!", "text-emerald-400");
-        } else {
-          soundBad();
-          dosa += 10;
-          updateCounters();
-          showFloatingText(randomX, bottomPos, "+10 Dosa!", "text-rose-400");
-        }
-        document.getElementById('mg-score').textContent = `${minigameScore} Poin`;
-      };
-
-      container.appendChild(bubble);
-    }
-
-    function showFloatingText(x, y, text, colorClass) {
-      const container = document.getElementById('bubbles-container');
-      const txt = document.createElement('div');
-      txt.className = `absolute font-black text-sm ${colorClass} animate-ping`;
-      txt.style.left = `${x}%`;
-      txt.style.bottom = `${y}px`;
-      txt.textContent = text;
-      container.appendChild(txt);
-      setTimeout(() => {
-        if (txt.parentElement) txt.parentElement.removeChild(txt);
-      }, 600);
-    }
-
-    function stopMinigame() {
-      clearInterval(minigameInterval);
-      clearInterval(minigameTimerInterval);
-    }
-
-
-    /* ===================================================
-       6. RESULT & CERTIFICATE GENERATOR LOGIC
-       =================================================== */
-    function showResultScreen() {
-      hideAllScreens();
-      document.getElementById('screen-result').classList.remove('hidden');
-
-      document.getElementById('res-pahala').textContent = pahala;
-      document.getElementById('res-dosa').textContent = dosa;
-
-      const statusBox = document.getElementById('mizan-status-box');
-
-      if (pahala >= dosa) {
-        soundGood();
-        statusBox.className = "mt-6 p-4 rounded-2xl bg-emerald-100 border-2 border-emerald-400 font-bold text-xs text-emerald-900 flex items-start gap-3";
-        statusBox.innerHTML = `
-          <span class="text-3xl">🏆</span>
-          <div>
-            <p class="font-extrabold text-sm text-emerald-800">MasyaAllah! Jempol Kebaikan Terjaga!</p>
-            <p class="mt-1">Amal pahalamu lebih berat! Allah Ar-Rahman sangat menyayangi anak sholih yang jempolnya menebar kedamaian dan kebaikan di gadget.</p>
-          </div>
-        `;
-      } else {
-        soundBad();
-        statusBox.className = "mt-6 p-4 rounded-2xl bg-rose-100 border-2 border-rose-400 font-bold text-xs text-rose-900 flex items-start gap-3";
-        statusBox.innerHTML = `
-          <span class="text-3xl">⚠️</span>
-          <div>
-            <p class="font-extrabold text-sm text-rose-800">Awas! Jangan Sampai Bangkrut Pahala!</p>
-            <p class="mt-1">Dosa ketikan jempolmu masih cukup tinggi. Yuk, minta maaf ke teman dan berjanji hanya mengetik kata-kata santun agar pahala shalatmu tidak terbuang di akhirat!</p>
-          </div>
-        `;
-      }
-    }
-
-    function printCertificate() {
-      soundClick();
-      window.print();
-    }
-  </script>
+  <!-- TOP HEADER / SCOREBAR -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b-4 border-teal-500 shadow-md px-4 py-3">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <!-- Logo / Title -->
+      <div class="flex items-center gap-3 cursor-pointer" onclick="goHome()">
+        <div class="w-10 h-10 bg-teal-500 text-white rounded-2xl flex items-center justify-center font-black text-xl shadow-lg transform hover:scale-105 transition">
+          👍
+        </div>
+        <div>
+          <h1 class="font-extrabold text-sm sm:text-lg text-teal-900 leading-tight">Jempol Kebaikan</h1>
+          <p class="text-xs font-semibold text-teal-600 hidden sm:block">Hamba Allah Ar-Rahman</p>
+        </div>
+      </div>
+
+      <!-- Live Counters: Catatan Baik & Catatan Buruk -->
+      <div class="flex items-center gap-2 sm:gap-4">
+        <!-- Catatan Baik (Pahala) -->
+        <div class="flex items-center gap-2 bg-emerald-50 border-2 border-emerald-300 px-3 py-1.5 rounded-2xl shadow-sm">
+          <span class="text-lg">🌟</span>
+          <div class="text-left">
+            <p class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider leading-none">Catatan Baik (Pahala)</p>
+            <span id="pahala-count" class="text-sm sm:text-base font-black text-emerald-600">0</span>
+          </div>
+        </div>
+
+        <!-- Catatan Buruk (Dosa) -->
+        <div class="flex items-center gap-2 bg-rose-50 border-2 border-rose-300 px-3 py-1.5 rounded-2xl shadow-sm">
+          <span class="text-lg">⚠️</span>
+          <div class="text-left">
+            <p class="text-[10px] font-bold text-rose-700 uppercase tracking-wider leading-none">'Catatan Buruk (Dosa)</p>
+            <span id="dosa-count" class="text-sm sm:text-base font-black text-rose-600">0</span>
+          </div>
+        </div>
+
+        <!-- Audio Toggle Button -->
+        <button id="btn-sound" onclick="toggleSound()" class="w-10 h-10 bg-slate-100 hover:bg-teal-100 text-slate-600 hover:text-teal-700 rounded-2xl flex items-center justify-center transition border-2 border-slate-200">
+          <i class="fa-solid fa-volume-high text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-grow max-w-4xl w-full mx-auto p-4 flex flex-col justify-center">
+
+    <!-- 1. SCREEN: HOME / MENU UTAMA -->
+    <section id="screen-home" class="space-y-6 text-center py-6">
+      <!-- Mascot Container -->
+      <div class="relative inline-block">
+        <div class="w-32 h-32 sm:w-40 sm:h-40 bg-gradient-to-tr from-teal-400 to-emerald-300 rounded-full mx-auto p-2 shadow-2xl flex items-center justify-center border-4 border-white pulse-glow">
+          <div class="text-7xl sm:text-8xl transform hover:rotate-12 transition duration-300">👍</div>
+        </div>
+        <span class="absolute -bottom-2 -right-2 bg-amber-400 text-teal-950 text-xs font-extrabold px-3 py-1 rounded-full border-2 border-white shadow">
+          Si Jempol Santun 🌟
+        </span>
+      </div>
+
+      <!-- Title & Intro -->
+      <div class="space-y-2 max-w-xl mx-auto">
+        <h2 class="text-2xl sm:text-4xl font-black text-teal-950 font-display">
+          Petualangan Jempol Kebaikan
+        </h2>
+        <p class="text-sm sm:text-base font-medium text-slate-600 leading-relaxed">
+          Tahukah kamu? Ketikan jempolmu di layar gadget dicatat oleh <strong class="text-emerald-700">Catatan Baik</strong> dan <strong class="text-rose-600">Catatan Buruk</strong>. Yuk, jadi anak sholih penebar kebaikan Ar-Rahman!
+        </p>
+      </div>
+
+      <!-- Mode Options -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto pt-4">
+        <!-- Mode 1 Card -->
+        <div onclick="startStoryMode()" class="group cursor-pointer bg-white border-4 border-emerald-400 hover:border-emerald-500 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 text-left flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-800">Petualangan Cerita Chat</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Simulasi pesan WhatsApp &amp; Game Roblox/Minecraft. Pilih ketikan lisan yang bikin Allah sayang!
+            </p>
+          </div>
+          <button class="mt-6 w-full py-3 bg-emerald-500 group-hover:bg-emerald-600 text-white font-extrabold rounded-xl shadow-md transition flex items-center justify-center gap-2">
+            <span>Mulai Simulasi</span> <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Mode 2 Card -->
+        <div onclick="startMinigameMode()" class="group cursor-pointer bg-white border-4 border-amber-400 hover:border-amber-500 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 text-left flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition">
+              <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-800">Refleks Jempol Halal</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Latih kecermatan jarimu! Ketuk gelembung kata-kata BAIK &amp; abaikan/hapus kata-kata BURUK!
+            </p>
+          </div>
+          <button class="mt-6 w-full py-3 bg-amber-500 group-hover:bg-amber-600 text-white font-extrabold rounded-xl shadow-md transition flex items-center justify-center gap-2">
+            <span>Main Mini-Game</span> <i class="fa-solid fa-gamepad"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Golden Advice Banner -->
+      <div class="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4 max-w-2xl mx-auto text-xs text-amber-900 font-semibold flex items-center gap-3 text-left">
+        <span class="text-2xl">📜</span>
+        <p><strong>Ingat Pesan Rasulullah ﷺ:</strong> "Siapa yang beriman kepada Allah dan hari akhir, hendaklah ia berkata yang baik atau diam." (HR. Bukhari &amp; Muslim)</p>
+      </div>
+    </section>
+
+
+    <!-- 2. SCREEN: MODE 1 - SIMULASI CHAT SMARTPHONE -->
+    <section id="screen-chat" class="hidden py-2 space-y-4">
+      <!-- Progress Bar Scenario -->
+      <div class="flex items-center justify-between text-xs font-bold text-slate-600 px-2">
+        <span id="scenario-step-indicator">Skenario 1 dari 5</span>
+        <span class="text-teal-700 font-extrabold" id="scenario-topic">Pinjam HP Orang Tua</span>
+      </div>
+
+      <div class="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
+        <div id="scenario-progress" class="bg-teal-500 h-2 rounded-full transition-all duration-300 w-1/5"></div>
+      </div>
+
+      <!-- Phone UI Frame -->
+      <div class="phone-mockup bg-slate-900 max-w-sm sm:max-w-md mx-auto overflow-hidden text-slate-800 flex flex-col h-[520px] relative">
+        <!-- Phone Top Bar -->
+        <div class="bg-teal-800 text-white px-4 py-3 flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2">
+            <div id="chat-avatar" class="w-8 h-8 bg-amber-300 rounded-full flex items-center justify-center text-base font-bold text-slate-800 shadow">
+              👩
+            </div>
+            <div>
+              <p id="chat-contact-name" class="font-bold leading-none text-sm">Grup WA Keluarga</p>
+              <p id="chat-status" class="text-[10px] text-teal-200">Online • Jempol Santun</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-teal-200">
+            <i class="fa-solid fa-signal"></i>
+            <i class="fa-solid fa-wifi"></i>
+            <i class="fa-solid fa-battery-full"></i>
+          </div>
+        </div>
+
+        <!-- Chat Scroll Area -->
+        <div id="chat-body" class="flex-grow bg-slate-100 p-4 overflow-y-auto space-y-3 custom-scrollbar text-xs">
+          <!-- Chat Bubbles generated dynamically -->
+        </div>
+
+        <!-- Choice Options Panel -->
+        <div id="chat-options-panel" class="bg-white border-t border-slate-200 p-3 space-y-2">
+          <p class="text-[11px] font-bold text-slate-500 uppercase tracking-wider text-center">Apa yang akan jempolmu ketik?</p>
+          <div id="chat-choices-container" class="space-y-2">
+            <!-- Buttons injected by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 3. SCREEN: MODE 2 - MINI GAME "REFLEKS JEMPOL HALAL" -->
+    <section id="screen-minigame" class="hidden py-2 space-y-4 text-center">
+      <!-- Game Info Panel -->
+      <div class="flex items-center justify-between bg-white px-4 py-3 rounded-2xl shadow-md border-2 border-amber-300">
+        <div class="text-left">
+          <p class="text-[10px] font-bold text-slate-400 uppercase">Waktu Tersisa</p>
+          <p id="mg-timer" class="text-xl font-black text-amber-600">30s</p>
+        </div>
+        <div>
+          <p class="text-[10px] font-bold text-slate-400 uppercase">Skor Mini-Game</p>
+          <p id="mg-score" class="text-xl font-black text-emerald-600">0 Poin</p>
+        </div>
+        <button onclick="goHome()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl text-xs font-bold transition">
+          Batal
+        </button>
+      </div>
+
+      <!-- Play Arena Canvas/Interactive Zone -->
+      <div id="minigame-arena" class="relative w-full h-[400px] bg-gradient-to-b from-teal-900 to-slate-900 rounded-3xl overflow-hidden border-4 border-amber-400 shadow-inner flex flex-col justify-between p-4">
+        <div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <!-- Floating bubbles layer -->
+        <div id="bubbles-container" class="absolute inset-0 overflow-hidden pointer-events-auto">
+          <!-- Floating items rendered via JS -->
+        </div>
+
+        <!-- Mini-Game Instructions overlay initially -->
+        <div id="mg-start-overlay" class="absolute inset-0 bg-slate-900/90 z-20 flex flex-col items-center justify-center p-6 text-white space-y-4">
+          <div class="text-5xl">⚡👍</div>
+          <h3 class="text-2xl font-extrabold text-amber-300">Refleks Jempol Halal</h3>
+          <p class="text-xs text-slate-300 max-w-sm leading-relaxed">
+            Tangkap gelembung <strong class="text-emerald-400">KATA BAIK (Hijau)</strong> untuk mendapat PAHALA 🌟. Abaikan / Hapus gelembung <strong class="text-rose-400">KATA BURUK (Merah)</strong> agar tidak dapat DOSA ⚠️!
+          </p>
+          <button onclick="runMinigameLoop()" class="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-black rounded-2xl shadow-lg transition transform hover:scale-105">
+            Mulai Permainan!
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 4. SCREEN: HASIL & MIZAN AMAL -->
+    <section id="screen-result" class="hidden py-4 space-y-6 text-center">
+      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border-4 border-teal-400 space-y-6">
+        
+        <h2 class="text-2xl sm:text-3xl font-black text-teal-950 font-display">
+          ⚖️ Mizan Amal Jempolmu
+        </h2>
+
+        <!-- Timbangan / Mizan Visual -->
+        <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border-2 border-teal-200 relative overflow-hidden">
+          <div class="grid grid-cols-2 gap-4 items-center">
+            <!-- Catatan Baik Box -->
+            <div class="bg-white border-2 border-emerald-400 rounded-2xl p-4 shadow-sm text-center">
+              <span class="text-3xl">🌟</span>
+              <p class="text-xs font-bold text-emerald-700 uppercase mt-1">Catatan Baik</p>
+              <p id="res-pahala" class="text-3xl font-black text-emerald-600">0</p>
+              <p class="text-[10px] text-slate-500 font-semibold mt-1">Pahala &amp; Cinta Allah</p>
+            </div>
+
+            <!-- Catatan Buruk Box -->
+            <div class="bg-white border-2 border-rose-400 rounded-2xl p-4 shadow-sm text-center">
+              <span class="text-3xl">⚠️</span>
+              <p class="text-xs font-bold text-rose-700 uppercase mt-1">Catatan Buruk</p>
+              <p id="res-dosa" class="text-3xl font-black text-rose-600">0</p>
+              <p class="text-[10px] text-slate-500 font-semibold mt-1">Dosa Kezaliman Jempol</p>
+            </div>
+          </div>
+
+          <!-- Evaluation Message -->
+          <div id="mizan-status-box" class="mt-6 p-4 rounded-xl font-bold text-sm text-left flex items-start gap-3">
+            <!-- Dynamic text by JS -->
+          </div>
+        </div>
+
+        <!-- Printable Certificate Area -->
+        <div id="printable-certificate" class="bg-amber-50 border-4 border-amber-300 rounded-3xl p-6 text-left space-y-4 shadow-inner relative overflow-hidden">
+          <div class="flex items-center justify-between border-b-2 border-amber-200 pb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-3xl">🎖️</span>
+              <div>
+                <h3 class="font-extrabold text-amber-900 text-lg leading-tight">SERTIFIKAT PAHLAWAN JEMPOL KEBAIKAN</h3>
+                <p class="text-xs text-amber-700 font-semibold">Madrasah Rabbaniyyah • Generasi Hamba Ar-Rahman</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="text-xs font-bold text-amber-800 bg-amber-200 px-3 py-1 rounded-full">RESMI</span>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-amber-900">Nama Anak Sholih / Sholihah:</label>
+            <input type="text" id="player-name-input" placeholder="Ketik Namamu Di Sini..." value="Anak Sholih" class="w-full px-4 py-2 bg-white border-2 border-amber-300 rounded-xl font-bold text-slate-800 focus:outline-none focus:border-amber-500">
+          </div>
+
+          <p class="text-xs text-amber-950 leading-relaxed italic">
+            "Diberikan sebagai bukti komitmen bahwa ketikan jempol di layar gadget digunakan hanya untuk menyebarkan kasih sayang, doa, dan kata-kata santun, serta menjaga diri dari kezaliman lisan."
+          </p>
+
+          <div class="flex items-center justify-between text-[11px] font-bold text-amber-800 pt-2 border-t border-amber-200">
+            <span>Disaksikan oleh: Catatan Baik &amp; Catatan Buruk</span>
+            <span>Motto: Menjadi Hamba Ar-Rahman 🌟</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <button onclick="printCertificate()" class="flex-1 py-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-black rounded-xl shadow-md transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-print"></i> Cetak / Simpan Sertifikat
+          </button>
+          <button onclick="goHome()" class="flex-1 py-3 bg-teal-600 hover:bg-teal-700 text-white font-black rounded-xl shadow-md transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-rotate-right"></i> Main Lagi
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ISLAMIC POPUP MODAL -->
+  <div id="modal-feedback" class="fixed inset-0 bg-slate-950/80 z-50 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 space-y-4 border-4 shadow-2xl transform transition-all scale-95" id="modal-card">
+      <div class="flex items-center gap-3">
+        <div id="modal-icon" class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl shadow">
+          🌟
+        </div>
+        <div>
+          <h4 id="modal-title" class="font-black text-lg text-slate-800">Catatan Malaikat</h4>
+          <p id="modal-subtitle" class="text-xs font-semibold text-slate-500">Pahala +100</p>
+        </div>
+      </div>
+
+      <!-- Emotional Friend Reaction Box -->
+      <div id="modal-reaction-box" class="bg-slate-50 border-2 rounded-2xl p-3 flex items-center gap-3">
+        <span id="modal-friend-emoji" class="text-3xl">😊</span>
+        <p id="modal-friend-text" class="text-xs font-bold text-slate-700">Temanmu tersenyum bahagia karena ketikanmu!</p>
+      </div>
+
+      <!-- Islamic Explanation -->
+      <p id="modal-explanation" class="text-xs text-slate-600 leading-relaxed font-medium">
+        Penjelasan islami...
+      </p>
+
+      <button onclick="closeModalAndNext()" class="w-full py-3 bg-teal-600 hover:bg-teal-700 text-white font-black rounded-xl shadow-md transition">
+        Lanjutkan Petualangan 🚀
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white/80 border-t border-slate-200 py-3 text-center text-xs font-bold text-teal-800">
+    Madrasah Rabbaniyyah • Menyayangi Teman Lewat Lisan &amp; Jempol 🌟
+  </footer>
+
+
+  <!-- JAVASCRIPT GAME LOGIC -->
+  <script>
+    /* ===================================================
+       1. AUDIO SYNTHESIZER (WEB AUDIO API - NO EXTERNAL FILES)
+       =================================================== */
+    let audioCtx = null;
+    let isSoundOn = true;
+
+    function initAudio() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+    }
+
+    function playTone(freq, type, duration, vol=0.1) {
+      if (!isSoundOn) return;
+      try {
+        initAudio();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(vol, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch(e){}
+    }
+
+    function soundGood() {
+      playTone(523.25, 'sine', 0.15, 0.2); // C5
+      setTimeout(() => playTone(659.25, 'sine', 0.15, 0.2), 100); // E5
+      setTimeout(() => playTone(783.99, 'sine', 0.25, 0.2), 200); // G5
+    }
+
+    function soundBad() {
+      playTone(300, 'sawtooth', 0.2, 0.2);
+      setTimeout(() => playTone(200, 'sawtooth', 0.3, 0.2), 150);
+    }
+
+    function soundClick() {
+      playTone(800, 'sine', 0.05, 0.1);
+    }
+
+    function toggleSound() {
+      isSoundOn = !isSoundOn;
+      const btn = document.getElementById('btn-sound');
+      if (isSoundOn) {
+        btn.innerHTML = '<i class="fa-solid fa-volume-high text-lg"></i>';
+        btn.classList.remove('text-rose-600');
+        soundGood();
+      } else {
+        btn.innerHTML = '<i class="fa-solid fa-volume-xmark text-lg"></i>';
+        btn.classList.add('text-rose-600');
+      }
+    }
+
+
+    /* ===================================================
+       2. GAME STATE & SCENARIO DATA
+       =================================================== */
+    let pahala = 0;
+    let dosa = 0;
+    let currentScenarioIndex = 0;
+
+    const scenarios = [
+      {
+        topic: "Pesan dari Ibu",
+        contactName: "Ibu Tersayang",
+        avatar: "🤱",
+        messages: [
+          { sender: "them", text: "Nak, tolong angkat pakaian di jemuran ya. Mendung sepertinya, Ibu masih di pasar." }
+        ],
+        choices: [
+          {
+            text: "Ketik: 'Siap Ibu sayang! Jemuran sudah Budi angkat. Hati-hati di jalan ya Bu. 🥰'",
+            isGood: true,
+            pahalaDelta: 100,
+            dosaDelta: 0,
+            emoji: "💖",
+            friendText: "Ibu sangat terharu dan bangga membaca balasan santunmu!",
+            explanation: "<strong>Pahala Berbakti (Birrul Walidain)!</strong> Mengetik balasan yang sopan dan patuh kepada orang tua mendatangkan ridha Allah Ar-Rahman. Ketikan jempolmu bernilai pahala besar!"
+          },
+          {
+            text: "Ketik: 'Ah Ibu repotin aja! Budi lagi asyik main game nih, suruh kakak aja!'",
+            isGood: false,
+            pahalaDelta: 0,
+            dosaDelta: 100,
+            emoji: "😢",
+            friendText: "Ibu bersedih dan kecewa karena balasan kasarmu.",
+            explanation: "<strong>Dosa Durhaka Lewat Jempol!</strong> Membantah orang tua lewat chat bobot dosanya SAMA dengan melawan secara langsung. Malaikat mencatat setiap huruf kasarmu!"
+          }
+        ]
+      },
+      {
+        topic: "Chat dengan Kakak",
+        contactName: "Kakak Rio",
+        avatar: "👦",
+        messages: [
+          { sender: "them", text: "Dek, lihat charger HP kakak di meja belajarmu nggak? Kalau ada tolong bawakan ke kamar ya." }
+        ],
+        choices: [
+          {
+            text: "Ketik: 'Ada nih Kak, sebentar aku antarkan ke kamarmu ya. 👍'",
+            isGood: true,
+            pahalaDelta: 100,
+            dosaDelta: 0,
+            emoji: "🤝",
+            friendText: "Kakak tersenyum senang dan berterima kasih atas bantuanmu!",
+            explanation: "<strong>Pahala Rukun Sesama Saudara!</strong> Membantu kakak atau adik dan membalas pesan mereka dengan baik adalah wujud kasih sayang yang disukai Allah."
+          },
+          {
+            text: "Ketik: 'Cari aja sendiri! Makanya jangan pelupa wleee 😝 dasar jelek!'",
+            isGood: false,
+            pahalaDelta: 0,
+            dosaDelta: 80,
+            emoji: "😠",
+            friendText: "Kakak kesal dan hal ini memicu pertengkaran di rumah.",
+            explanation: "<strong>Dosa Memancing Pertengkaran!</strong> Mengetik ejekan kepada saudara memutus tali silaturahmi. Gerakan jempol ini bernilai dosa kezaliman."
+          }
+        ]
+      },
+      {
+        topic: "Pesan untuk Tante (Pakai HP Ibu)",
+        contactName: "Tante Nur",
+        avatar: "👩‍🦰",
+        messages: [
+          { sender: "them", text: "Assalamu'alaikum, ini Tante. Ibu ada di rumah nggak ya?" }
+        ],
+        choices: [
+          {
+            text: "Kirim stiker bunga & ketik: 'Wa'alaikumsalam Tante, ini Budi. Ibu sedang mandi, nanti Budi sampaikan ya. Tante sehat selalu! 🌸'",
+            isGood: true,
+            pahalaDelta: 100,
+            dosaDelta: 0,
+            emoji: "🥰",
+            friendText: "Tante Nur tersenyum gembira membaca pesan sopan darimu!",
+            explanation: "<strong>Pahala Menghormati Kerabat!</strong> Menggunakan HP orang tua untuk membalas keluarga dengan stiker lucu dan sopan mencerminkan akhlak anak shalih idaman Allah Ar-Rahman."
+          },
+          {
+            text: "Kirim stiker hantu jelek/seram dan ketik: 'GAK ADA! Jangan ganggu!'",
+            isGood: false,
+            pahalaDelta: 0,
+            dosaDelta: 100,
+            emoji: "😨",
+            friendText: "Tante kaget, tersinggung, dan sedih melihat balasan itu.",
+            explanation: "<strong>Dosa Menyakiti Kerabat!</strong> Tangan kita tidak boleh mengirim gambar/stiker jelek yang membuat orang lain sedih. Ini adalah dosa, malaikat mencatat ulah jempolmu!"
+          }
+        ]
+      },
+      {
+        topic: "Main Game Online (Roblox / Minecraft)",
+        contactName: "Grup Chat Mabar",
+        avatar: "🎮",
+        messages: [
+          { sender: "system", text: "Match Selesai: Tim Kamu Kalah Tipis!" },
+          { sender: "them", text: "Aduh, maaf ya teman-teman tadi aku sempat salah jalan pas lagi diserang..." }
+        ],
+        choices: [
+          {
+            text: "Ketik: 'GG (Good Game) kawan! Tidak apa-apa, besok kita main lagi ya! 🌟'",
+            isGood: true,
+            pahalaDelta: 100,
+            dosaDelta: 0,
+            emoji: "😄",
+            friendText: "Temanmu merasa lega dan makin semangat bermain denganmu!",
+            explanation: "<strong>Pahala Memotivasi Teman!</strong> Mengendalikan jempol agar tetap mengetik yang baik saat main game online membuktikan kamu hamba Allah Ar-Rahman yang sejati."
+          },
+          {
+            text: "Ketik: 'Noob banget sih lu! Parah, dasar anak [Ejek Nama Orang Tua Teman]!'",
+            isGood: false,
+            pahalaDelta: 0,
+            dosaDelta: 100,
+            emoji: "😭",
+            friendText: "Temanmu sangat sedih karena diejek dan nama orang tuanya diolok-olok.",
+            explanation: "<strong>Dosa Besar Kezaliman Jempol!</strong> Mengejek skill dan nama orang tua teman di game online akan ditanya oleh Allah di akhirat. Jempolmu berbuat zalim!"
+          }
+        ]
+      },
+      {
+        topic: "Menyebar Aib Teman",
+        contactName: "Grup WA Kelas 5",
+        avatar: "📸",
+        messages: [
+          { sender: "them", text: "Eh liat nih muka si Budi pas ketiduran di kelas wkwk, lucu banget dijadiin stiker WhatsApp! 😂" }
+        ],
+        choices: [
+          {
+            text: "Ketik: 'Eh jangan disebarin kawan, itu kan aib. Kasihan Budi nanti malu, yuk kita hapus aja. 🛑'",
+            isGood: true,
+            pahalaDelta: 100,
+            dosaDelta: 0,
+            emoji: "🛡️",
+            friendText: "Budi terselamatkan dari rasa malu yang mendalam karena belaanmu.",
+            explanation: "<strong>Pahala Menutup Aib Teman!</strong> Siapa yang mencegah tersebarnya aib teman, Allah Ar-Rahman akan menutup aibnya di hari kiamat."
+          },
+          {
+            text: "Ketik: 'Wkwkwk kocak banget! Aku forward ke grup ekskul ah biar viral! 🤣'",
+            isGood: false,
+            pahalaDelta: 0,
+            dosaDelta: 100,
+            emoji: "💔",
+            friendText: "Budi menangis di kamar karena foto aibnya tersebar tanpa izin.",
+            explanation: "<strong>Pahala Ibadah Bisa Habis!</strong> Menyebarkan foto aib/stiker WA teman tanpa izin adalah DOSA BESAR kezaliman tangan. Jangan sampai pahala shalat dan puasamu habis di akhirat untuk ganti rugi pada Budi!"
+          }
+        ]
+      },
+      {
+        topic: "Mengucilkan Teman",
+        contactName: "Grup Geng Bermain",
+        avatar: "👥",
+        messages: [
+          { sender: "them", text: "Teman-teman, besok kita bikin grup WA internal baru aja yuk. Tapi nggak usah masukin si Budi, dia kan cupu." }
+        ],
+        choices: [
+          {
+            text: "Ketik: 'Jangan gitu dong, Budi kan teman kita juga. Biar seru kita kumpul bareng semua tanpa pilih-pilih. 🤗'",
+            isGood: true,
+            pahalaDelta: 100,
+            dosaDelta: 0,
+            emoji: "✨",
+            friendText: "Grup tetap rukun dan Budi merasa dihargai.",
+            explanation: "<strong>Pahala Menjaga Persaudaraan!</strong> Merangkul semua teman dan tidak ikut-ikutan mengucilkan adalah akhlak mulia yang sangat disayangi Allah."
+          },
+          {
+            text: "Ketik: 'Setuju banget! Bikin grup rahasia aja, usir dia dari pergaulan kita! 🤭'",
+            isGood: false,
+            pahalaDelta: 0,
+            dosaDelta: 100,
+            emoji: "😔",
+            friendText: "Budi merasa terasingkan, sedih, dan tidak punya teman.",
+            explanation: "<strong>Dosa Mengucilkan Orang!</strong> Mengucilkan teman dari grup adalah kezaliman lisan. Apakah kamu tidak mau disayang Allah Ar-Rahman? Jangan sampai Allah benci kita karena jempol kita menyakiti hati teman."
+          }
+        ]
+      }
+    ];
+
+
+    /* ===================================================
+       3. NAVIGATION & SCREEN CONTROLLERS
+       =================================================== */
+    function hideAllScreens() {
+      document.getElementById('screen-home').classList.add('hidden');
+      document.getElementById('screen-chat').classList.add('hidden');
+      document.getElementById('screen-minigame').classList.add('hidden');
+      document.getElementById('screen-result').classList.add('hidden');
+    }
+
+    function updateCounters() {
+      document.getElementById('pahala-count').textContent = pahala;
+      document.getElementById('dosa-count').textContent = dosa;
+    }
+
+    function goHome() {
+      soundClick();
+      hideAllScreens();
+      document.getElementById('screen-home').classList.remove('hidden');
+      stopMinigame();
+    }
+
+    function startStoryMode() {
+      soundClick();
+      hideAllScreens();
+      pahala = 0;
+      dosa = 0;
+      currentScenarioIndex = 0;
+      updateCounters();
+      document.getElementById('screen-chat').classList.remove('hidden');
+      loadScenario(currentScenarioIndex);
+    }
+
+
+    /* ===================================================
+       4. SIMULASI CHAT SCENARIO LOGIC
+       =================================================== */
+    function loadScenario(index) {
+      const sc = scenarios[index];
+      
+      // Update header indicators
+      document.getElementById('scenario-step-indicator').textContent = `Skenario ${index + 1} dari ${scenarios.length}`;
+      document.getElementById('scenario-topic').textContent = sc.topic;
+      document.getElementById('scenario-progress').style.width = `${((index + 1) / scenarios.length) * 100}%`;
+
+      document.getElementById('chat-contact-name').textContent = sc.contactName;
+      document.getElementById('chat-avatar').textContent = sc.avatar;
+
+      // Render Messages
+      const chatBody = document.getElementById('chat-body');
+      chatBody.innerHTML = '';
+
+      sc.messages.forEach(m => {
+        const bubble = document.createElement('div');
+        if (m.sender === 'system') {
+          bubble.className = "text-center text-[10px] bg-slate-200 text-slate-600 px-3 py-1 rounded-full font-bold my-1 mx-auto w-fit";
+          bubble.textContent = m.text;
+        } else {
+          bubble.className = "bg-white border border-slate-200 p-3 rounded-2xl rounded-tl-none shadow-sm text-slate-800 max-w-[85%] leading-relaxed font-medium";
+          bubble.textContent = m.text;
+        }
+        chatBody.appendChild(bubble);
+      });
+
+      // Render Choices Buttons
+      const choicesContainer = document.getElementById('chat-choices-container');
+      choicesContainer.innerHTML = '';
+
+      sc.choices.forEach(ch => {
+        const btn = document.createElement('button');
+        btn.className = "w-full p-3 bg-slate-50 hover:bg-teal-50 border-2 border-slate-200 hover:border-teal-400 text-slate-700 hover:text-teal-950 rounded-xl text-left font-bold transition flex items-center justify-between text-xs group shadow-sm";
+        btn.innerHTML = `
+          <span>${ch.text}</span>
+          <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-teal-600 transition"></i>
+        `;
+        btn.onclick = () => selectChoice(ch);
+        choicesContainer.appendChild(btn);
+      });
+    }
+
+    function selectChoice(choice) {
+      // Add user message bubble to chat
+      const chatBody = document.getElementById('chat-body');
+      const myBubble = document.createElement('div');
+      myBubble.className = "bg-teal-600 text-white p-3 rounded-2xl rounded-tr-none shadow-sm max-w-[85%] ml-auto text-xs leading-relaxed font-bold animate-bounce-short";
+      myBubble.textContent = choice.text;
+      chatBody.appendChild(myBubble);
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+      // Apply points
+      if (choice.isGood) {
+        soundGood();
+        pahala += choice.pahalaDelta;
+      } else {
+        soundBad();
+        dosa += choice.dosaDelta;
+      }
+      updateCounters();
+
+      // Show Modal Feedback
+      setTimeout(() => {
+        showFeedbackModal(choice);
+      }, 400);
+    }
+
+    function showFeedbackModal(choice) {
+      const modal = document.getElementById('modal-feedback');
+      const modalCard = document.getElementById('modal-card');
+      const modalIcon = document.getElementById('modal-icon');
+      const modalTitle = document.getElementById('modal-title');
+      const modalSub = document.getElementById('modal-subtitle');
+      const modalEmoji = document.getElementById('modal-friend-emoji');
+      const modalFriendText = document.getElementById('modal-friend-text');
+      const modalExp = document.getElementById('modal-explanation');
+
+      if (choice.isGood) {
+        modalCard.className = "bg-white rounded-3xl max-w-md w-full p-6 space-y-4 border-4 border-emerald-400 shadow-2xl";
+        modalIcon.className = "w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl shadow";
+        modalIcon.innerHTML = "🌟";
+        modalTitle.textContent = "Catatan Kebajikan Raqib";
+        modalSub.textContent = `Pahala +${choice.pahalaDelta} (Allah Ar-Rahman Ridho)`;
+        modalSub.className = "text-xs font-bold text-emerald-600";
+      } else {
+        modalCard.className = "bg-white rounded-3xl max-w-md w-full p-6 space-y-4 border-4 border-rose-400 shadow-2xl";
+        modalIcon.className = "w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl shadow";
+        modalIcon.innerHTML = "⚠️";
+        modalTitle.textContent = "Catatan Peringatan 'Atid";
+        modalSub.textContent = `Dosa +${choice.dosaDelta} (Hati-hati Kezaliman Jempol)`;
+        modalSub.className = "text-xs font-bold text-rose-600";
+      }
+
+      modalEmoji.textContent = choice.emoji;
+      modalFriendText.textContent = choice.friendText;
+      modalExp.innerHTML = choice.explanation;
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeModalAndNext() {
+      soundClick();
+      document.getElementById('modal-feedback').classList.add('hidden');
+      currentScenarioIndex++;
+      if (currentScenarioIndex < scenarios.length) {
+        loadScenario(currentScenarioIndex);
+      } else {
+        showResultScreen();
+      }
+    }
+
+
+    /* ===================================================
+       5. MODE 2: MINI-GAME "REFLEKS JEMPOL HALAL" LOGIC
+       =================================================== */
+    let minigameInterval = null;
+    let minigameTimerInterval = null;
+    let minigameTimeLeft = 30;
+    let minigameScore = 0;
+
+    const goodWords = ["MasyaAllah", "Terima kasih", "Semangat!", "Maaf ya", "Kamu Hebat", "Alhamdulillah", "Jazakallah", "Saling Maaf", "Doa Baik"];
+    const badWords = ["Noob!", "Kirim foto aib", "Ejek ortu", "Keluarkan dia!", "Jelek banget!", "Benci kamu!", "Sebar rahasia"];
+
+    function startMinigameMode() {
+      soundClick();
+      hideAllScreens();
+      document.getElementById('screen-minigame').classList.remove('hidden');
+      document.getElementById('mg-start-overlay').classList.remove('hidden');
+      document.getElementById('bubbles-container').innerHTML = '';
+      minigameScore = 0;
+      minigameTimeLeft = 30;
+      document.getElementById('mg-score').textContent = "0 Poin";
+      document.getElementById('mg-timer').textContent = "30s";
+    }
+
+    function runMinigameLoop() {
+      soundClick();
+      document.getElementById('mg-start-overlay').classList.add('hidden');
+      
+      // Timer countdown
+      minigameTimerInterval = setInterval(() => {
+        minigameTimeLeft--;
+        document.getElementById('mg-timer').textContent = `${minigameTimeLeft}s`;
+        if (minigameTimeLeft <= 0) {
+          stopMinigame();
+          // Add minigame score to main pahala
+          pahala += minigameScore;
+          updateCounters();
+          showResultScreen();
+        }
+      }, 1000);
+
+      // Spawn bubbles
+      minigameInterval = setInterval(() => {
+        spawnBubble();
+      }, 800);
+    }
+
+    function spawnBubble() {
+      const container = document.getElementById('bubbles-container');
+      if (!container) return;
+
+      const isGood = Math.random() > 0.35; // 65% good, 35% bad
+      const word = isGood ? goodWords[Math.floor(Math.random() * goodWords.length)] : badWords[Math.floor(Math.random() * badWords.length)];
+
+      const bubble = document.createElement('div');
+      const randomX = Math.floor(Math.random() * 70) + 10; // 10% to 80%
+
+      bubble.className = `absolute px-4 py-2 rounded-full font-extrabold text-xs shadow-lg cursor-pointer transform transition duration-200 select-none flex items-center gap-1 ${
+        isGood 
+          ? 'bg-emerald-500 text-white border-2 border-emerald-300 hover:scale-110' 
+          : 'bg-rose-600 text-white border-2 border-rose-300 hover:scale-110'
+      }`;
+      bubble.style.left = `${randomX}%`;
+      bubble.style.bottom = `-50px`;
+      bubble.innerHTML = `${isGood ? '🌟' : '⚠️'} ${word}`;
+
+      // Animation floating up
+      let bottomPos = -50;
+      const speed = Math.random() * 2 + 1.5;
+
+      const floatAnim = setInterval(() => {
+        bottomPos += speed;
+        bubble.style.bottom = `${bottomPos}px`;
+
+        if (bottomPos > 420) {
+          clearInterval(floatAnim);
+          if (bubble.parentElement) bubble.parentElement.removeChild(bubble);
+        }
+      }, 20);
+
+      // Tap / Click Event
+      bubble.onclick = () => {
+        clearInterval(floatAnim);
+        if (bubble.parentElement) bubble.parentElement.removeChild(bubble);
+
+        if (isGood) {
+          soundGood();
+          minigameScore += 20;
+          showFloatingText(randomX, bottomPos, "+20 Pahala!", "text-emerald-400");
+        } else {
+          soundBad();
+          dosa += 10;
+          updateCounters();
+          showFloatingText(randomX, bottomPos, "+10 Dosa!", "text-rose-400");
+        }
+        document.getElementById('mg-score').textContent = `${minigameScore} Poin`;
+      };
+
+      container.appendChild(bubble);
+    }
+
+    function showFloatingText(x, y, text, colorClass) {
+      const container = document.getElementById('bubbles-container');
+      const txt = document.createElement('div');
+      txt.className = `absolute font-black text-sm ${colorClass} animate-ping`;
+      txt.style.left = `${x}%`;
+      txt.style.bottom = `${y}px`;
+      txt.textContent = text;
+      container.appendChild(txt);
+      setTimeout(() => {
+        if (txt.parentElement) txt.parentElement.removeChild(txt);
+      }, 600);
+    }
+
+    function stopMinigame() {
+      clearInterval(minigameInterval);
+      clearInterval(minigameTimerInterval);
+    }
+
+
+    /* ===================================================
+       6. RESULT & CERTIFICATE GENERATOR LOGIC
+       =================================================== */
+    function showResultScreen() {
+      hideAllScreens();
+      document.getElementById('screen-result').classList.remove('hidden');
+
+      document.getElementById('res-pahala').textContent = pahala;
+      document.getElementById('res-dosa').textContent = dosa;
+
+      const statusBox = document.getElementById('mizan-status-box');
+
+      if (pahala >= dosa) {
+        soundGood();
+        statusBox.className = "mt-6 p-4 rounded-2xl bg-emerald-100 border-2 border-emerald-400 font-bold text-xs text-emerald-900 flex items-start gap-3";
+        statusBox.innerHTML = `
+          <span class="text-3xl">🏆</span>
+          <div>
+            <p class="font-extrabold text-sm text-emerald-800">MasyaAllah! Jempol Kebaikan Terjaga!</p>
+            <p class="mt-1">Amal pahalamu lebih berat! Allah Ar-Rahman sangat menyayangi anak sholih yang jempolnya menebar kedamaian dan kebaikan di gadget.</p>
+          </div>
+        `;
+      } else {
+        soundBad();
+        statusBox.className = "mt-6 p-4 rounded-2xl bg-rose-100 border-2 border-rose-400 font-bold text-xs text-rose-900 flex items-start gap-3";
+        statusBox.innerHTML = `
+          <span class="text-3xl">⚠️</span>
+          <div>
+            <p class="font-extrabold text-sm text-rose-800">Awas! Jangan Sampai Bangkrut Pahala!</p>
+            <p class="mt-1">Dosa ketikan jempolmu masih cukup tinggi. Yuk, minta maaf ke teman dan berjanji hanya mengetik kata-kata santun agar pahala shalatmu tidak terbuang di akhirat!</p>
+          </div>
+        `;
+      }
+    }
+
+    function printCertificate() {
+      soundClick();
+      window.print();
+    }
+  </script>
 </body>
 </html>
-
-```
-
-Silakan *commit* perubahan ini ke GitHub, dan website Anda akan otomatis memperbarui tampilannya via Netlify!
